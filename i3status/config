@@ -1,0 +1,35 @@
+general {
+  colors = true
+  color_good = "#a3be8c"
+  color_degraded = "#ebcb8b"
+  color_bad = "#bf616a"
+  interval = 1
+  separator = "  "
+}
+
+order += "load"
+order += "memory"
+order += "disk /"
+order += "time"
+order += "battery 0"
+
+
+load {
+  format = "Load: %1min, %5min, %15min"
+}
+
+disk "/" {
+  format = "Disk Free: %free"
+}
+
+time {
+  format = "%Y-%m-%d %H:%M:%S"
+}
+
+memory {
+  format = "F: %free A: %available U: %used / T: %total"
+}
+
+battery 0 {
+  format = "%status %remaining (%emptytime %consumption)"
+}
